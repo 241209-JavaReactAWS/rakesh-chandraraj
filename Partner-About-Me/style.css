@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color:aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+a {
+    color:aliceblue;
+    text-decoration: none;
+    font-size:20px;
+    text-align:center;
+}
+
+.center {
+    font-size:1000%;
+    position: fixed; 
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
