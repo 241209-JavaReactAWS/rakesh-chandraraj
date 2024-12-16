@@ -1,0 +1,11 @@
+/* This is an external stylesheet, and it will be what you use the majority of the time to style your elements. 
+    Why would we use this as a default? This can be used in several different files at once (inline and internal
+    can only be used in one file at a time). 
+
+    It has the lowest priority (barring any !important things) meaning if you need to change the styling specifically, 
+    you can. It's easy to overwrite it. 
+*/
+
+#my-special-paragraph{
+    font-size:x-large;
+}

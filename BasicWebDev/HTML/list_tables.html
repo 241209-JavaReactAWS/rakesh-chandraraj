@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilled Salmon Recipe</title>
+</head>
+<body>
+    
+    <!-- 
+        Page about a grilled salmon recipe 
+
+        On a recipe page, there's usually 3 things: 
+        - A list of ingredients 
+        - Steps to cook the food 
+        - Nutritional facts 
+
+        These 3 things relate very easily to 3 common structures found in HTML pages 
+        - Unordered lists 
+        - Ordered lists 
+        - Tables
+    -->
+
+    <h1>Grilled Salmon Recipe</h1>
+
+    <h2>Ingredients</h2>
+    <ul type="square"> <!-- Unordered list: the order doesn't matter -->
+        <li>Slab of Salmon</li>
+        <li>Avocado oil </li>
+        <li>Your favorite seasonings
+            <ul>
+                <li>Salt</li>
+                <li>Pepper</li>
+                <li>Other Spices
+                    <ul>
+                        <li>Garlic</li>
+                        <li>Onion</li>
+                        <li>Paprika</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <!-- <li><img src="./salmon_cut.jpeg"></li> -->
+    </ul>
+
+    <h2>Cooking Instructions</h2>
+    <ol> <!-- Ordered lists: order does matter and is very important -->
+        <li>On a cutting board you can clean easily, slice the salmon slab into 8ox filets</li>
+        <li>Preheat grill to 400 degrees F.</li>
+        <li>Lightly drizzle oil onto the salmon</li>
+        <li>Add your favorite seasonings</li>
+        <li>Grill for 12 minutes and flip after 8 minutes</li>
+    </ol>
+
+        <h2>Nutritional Facts</h2>
+    <!-- Tables insist of rows and columns and there can be any size and any dimensions. -->
+    <table> 
+        <tr> 
+            <th>Content</th>
+            <th>Amount per Serving</th>
+        </tr>
+        <tr>
+            <td>Protein</td>
+            <td>34g</td>
+        </tr>
+        <tr>
+            <td>Sugar</td>
+            <td>0g</td>
+        </tr>
+    </table> 
+
+</body>
+</html>

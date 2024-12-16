@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+    <!-- 
+        CSS (Cascading Style Sheets) is the second part of our frontend web pages. If HTML outlines the basic 
+        structure of a page, CSS's job is to make it prettier. CSS allows us to style and change the 
+        look of our pages. 
+
+        There are 3 major kinds of CSS we'll keep track of: 
+        - Inline CSS: Style achieved by manipulating the style attribute on a specific element 
+        - Internal CSS: Defined in the head of the HTML document and used for the entire page in particular 
+        - External CSS: External stylesheet used to provide styles to multiple locations 
+
+        We'll see this in action, but CSS types have a specific priority. It can be thought up as measured 
+        by proximity to the code to be styled. 
+    -->
+    <style>
+        /* Everything inside of this style tag is pure CSS (the comments changing is the dead giveaway) */
+        
+        /* ID selector -> used to select a SPECIFIC element on the page using its ID */
+        /* There's nothing stopping you for using id, but it's bad practice and will interfere with JavaScript */
+        #my-special-div {
+            /* Allows me to define the rule for the element with this id */
+            border: 2px black dashed;
+            color:green;
+        }
+
+        /* Class selector -> used for select multiple elements with the same class*/
+        .div-class {
+            background-color:lemonchiffon;
+            border: 5px slateblue solid;
+            margin: 10px;
+        }
+
+        .div-class-2 {
+            background-color:white;
+            border: 5px slateblue solid;
+            margin: 10px;
+        }
+
+        /* Tag selector -> Used to select all of the elements with a specific tag */
+        span{
+            background-color:blanchedalmond;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <!-- External style sheets are connected to their HTML pages by a link tag -->
+    <!-- Depending on this, the order of external vs internal styling is important (capable of being overwritten) -->
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+    <!-- Inline Styling -->
+    <h1>CSS Rules are defined in Key-Value pairs that can be assigned in different locations</h1>
+    <p style="color:goldenrod; background-color:black"> This is an example of inline styling using p</p>
+    <!-- Why is the black box across the entire page? Needs to be explicitly stopped? 
+        A paragraph element is known as a BLOCK element, and their width will go to the other side of the page. 
+        The alternative to this is an INLINE element
+        A SPAN element is the alternative to a paragraph, but it is inline
+    -->
+    <span style="background-color:blueviolet; color: goldenrod;">This is a second paragraph using span</span>
+
+    <!-- Internal Styling -->
+    <div>
+        <h2>Selectors</h2>
+        <h3>Element, Class, and ID Selectors</h3>
+
+        <!-- ID's are specific; so this is the only time this id is used -->
+        <div id="my-special-div">
+            <p>This div has a unique identifier called an ID</p>
+            <p>Second child element</p>
+        </div>
+
+        <!-- Classes can be used by multiple elements-->
+        <div class="div-class">
+            <p>This div shares a class with the div below!</p>
+        </div>
+        <div class="div-class">
+            <p>This div shares a class with the div above!</p>
+            <div class="div-class-2">
+                Sub Div
+            </div>
+        </div>
+
+        <!-- A tag can be targeted for styling -->
+        <div>
+            <span>This is it's own span tag</span>
+        </div>
+
+    </div>
+
+    <!-- External styling. The styling is in a separate file, brought into this using the link tag in the head tag -->
+    <p id="my-special-paragraph">This paragraph was styled externally!</p>
+
+</body>
+</html>
