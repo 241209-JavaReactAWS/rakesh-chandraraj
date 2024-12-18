@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.revature.daos.PlayerDAO;
 import com.revature.models.Player;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PlayerService {
     private final PlayerDAO playerDAO;
 
